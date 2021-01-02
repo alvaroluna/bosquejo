@@ -1,0 +1,86 @@
+/* ============= */
+/* CSS VARIABLES */
+/* ============= */
+* {
+    --cardZindex: 4;
+    
+    --textBannerColor: rgba(34, 34, 34, 1.0);
+    --textBannerFontSize: .8em;
+
+    --boxShadowSettings: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ================ */
+/* FOREGROUND LAYER */
+/* ================ */
+#foreground {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+#topRight {
+    position: fixed;
+    top: 5vh;
+    left: 15vw;
+    font-family: 'karla';
+    font-size: var(--textBannerFontSize);
+    /* color: rgb(26, 18, 18); */
+    color: var(--textBannerColor);
+    /* text-transform: uppercase; */
+    width: auto;
+    /* width: 20em; */
+    line-height: .8em;
+    /* border: 5px solid black; */
+    padding: .5em;
+    /* background: rgba(45, 87, 996, .25);
+    border-radius: 3rem; */
+}
+#btmLeft {
+    position: fixed;
+    bottom: 5vh;
+    right: 15vw;
+    font-family: 'karla';
+    font-size: var(--textBannerFontSize);
+    color: var(--textBannerColor);
+    /* text-transform: uppercase; */
+    width: auto;
+    line-height: .8em;
+    /* border: 5px solid black; */
+    padding: .2em;
+    transform: rotate(-90deg);
+}
+
+
+/* =============== */
+/* MIDGROUND LAYER */
+/* =============== */
+
+/* this is the <canvas> tag created by threejs */
+canvas { 
+    /* this ensures <canvas> is below all other elememts */
+    display: block;
+}
+.pixelGrid {
+    display: block;
+    height: 10em;
+    width: 10em;
+
+    margin: 1em;
+    padding: 1em;
+
+    background:rgba(0, 0, 235, 1.0);
+}
+
+/* ================ */
+/* BACKGROUND LAYER */
+/* ================ */
+
+body { 
+    margin: 0; 
+    height: 100vh;
+    /* padding: 10em */
+
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(0, 183, 255, 0.5)); */
+    background: rgba(241, 242, 235, 1.0);
+    /* backdrop-filter: blur(3px); */
+}
